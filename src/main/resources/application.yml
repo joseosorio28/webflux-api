@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: spring-webflux-api-rest
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: admin2022
+      database: webfluxtest
+      port: 27017
+      host: localhost
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+images:
+  upload:
+    path: C://images//
+
+server:
+  port: 8980
+  servlet:
+    context-path: /springwebflux
+  errorResponse:
+    include-message: always
+    inlucde-binding-errors: always
+
+logging:
+  level:
+    com.pragma: DEBUG
