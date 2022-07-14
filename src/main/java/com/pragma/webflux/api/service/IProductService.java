@@ -24,5 +24,7 @@ public interface IProductService {
     Mono<Image> findImageById(String id);
     Mono<Image> saveImage(Image image);
 
+    Mono<Product> findByName(String name);
+    Mono<Category> findCategoryByName(String name);
 
 }

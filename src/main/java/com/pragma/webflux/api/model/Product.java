@@ -24,11 +24,12 @@ public class Product {
     private String id;
     @NotEmpty
     private String name;
-    @NotNull
+    @NotNull(message = "can´t be null")
     private Double price;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createAt;
     @Valid
+    @NotNull
     private Category category;
     private Set<Image> images = new HashSet<>();
 

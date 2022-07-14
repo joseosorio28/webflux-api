@@ -94,4 +94,14 @@ public class ProductServiceImpl implements IProductService{
     public Mono<Image> saveImage(Image image) {
         return imagesRepository.save(image);
     }
+
+    @Override
+    public Mono<Product> findByName(String name) {
+        return productRepository.findByName(name);
+    }
+
+    @Override
+    public Mono<Category> findCategoryByName(String name) {
+        return categoryRepository.findByName(name);
+    }
 }

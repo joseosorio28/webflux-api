@@ -25,6 +25,9 @@ images:
   upload:
     path: C://images//
 
+api:
+  endpoint: /api/v2/products/
+
 server:
   port: 8980
   servlet:
